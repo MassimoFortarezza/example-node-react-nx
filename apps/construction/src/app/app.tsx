@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { ChakraProvider } from '@chakra-ui/react';
 import { Message } from '@mf-cos/api-interfaces';
+import React, { useEffect, useState } from 'react';
 
-export const App = () => {
+export function App() {
   const [m, setMessage] = useState<Message>({ message: '' });
 
   useEffect(() => {
@@ -11,7 +12,7 @@ export const App = () => {
   }, []);
 
   return (
-    <>
+    <ChakraProvider>
       <div style={{ textAlign: 'center' }}>
         <h1>Welcome to construction!</h1>
         <img
@@ -21,8 +22,8 @@ export const App = () => {
         />
       </div>
       <div>{m.message}</div>
-    </>
+    </ChakraProvider>
   );
-};
+}
 
 export default App;

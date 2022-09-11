@@ -1,42 +1,93 @@
-{
-  "root": true,
-  "ignorePatterns": ["**/*"],
-  "plugins": ["@nrwl/nx"],
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "rules": {
-        "@nrwl/nx/enforce-module-boundaries": [
-          "error",
-          {
-            "enforceBuildableLibDependency": true,
-            "allow": [],
-            "depConstraints": [
-              {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nrwl/nx/typescript"],
-      "rules": {}
-    },
-    {
-      "files": ["*.js", "*.jsx"],
-      "extends": ["plugin:@nrwl/nx/javascript"],
-      "rules": {}
-    },
-    {
-      "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
-      "env": {
-        "jest": true
+  {
+    "root": true,
+    "ignorePatterns": ["**/*"],
+    "plugins": ["@nrwl/nx", 
+    "@typescript-eslint",
+    "simple-import-sort",
+    "prettier"],
+    "overrides": [
+      {
+        "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+        "extends": [ "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "plugin:prettier/recommended"],
+        "rules": {
+          "@nrwl/nx/enforce-module-boundaries": [
+            "error",
+            {
+              "enforceBuildableLibDependency": true,
+              "allow": [],
+              "depConstraints": [
+                {
+                  "sourceTag": "*",
+                  "onlyDependOnLibsWithTags": ["*"]
+                }
+              ]
+            }
+          ],
+          "prettier/prettier": [
+            "warn",
+            {
+              "singleQuote": true,
+              "endOfLine": "auto",
+              "trailingComma": "all"
+            }
+          ],
+          "no-console": [
+            "warn"
+          ],
+          "@typescript-eslint/explicit-function-return-type": "off",
+          "@typescript-eslint/explicit-member-accessibility": "off",
+          "@typescript-eslint/no-explicit-any": "off",
+          "@typescript-eslint/no-submodule-imports": "off",
+          "@typescript-eslint/no-unused-expressions": "warn",
+          "@typescript-eslint/jsx-no-lambda": "off",
+          "@typescript-eslint/prefer-interface": "off",
+          "@typescript-eslint/interface-name-prefix": "off",
+          "@typescript-eslint/prefer-optional-chain": [
+            "error"
+          ],
+          "@typescript-eslint/no-var-requires": "off",
+          "@typescript-eslint/explicit-module-boundary-types": "off",
+          "@typescript-eslint/no-unused-vars": [
+            "warn",
+            {
+              "args": "none",
+              "ignoreRestSiblings": true
+            }
+          ],
+          "import/extensions": "off",
+          "import/prefer-default-export": "off",
+          "no-use-before-define": "off",
+          "@typescript-eslint/no-use-before-define": "error",
+          "@typescript-eslint/camelcase": "off",
+          "sort-keys": "off",
+          "sort-imports": "off",
+          "simple-import-sort/imports": "error",
+          "simple-import-sort/exports": "error",
+          "quotes": 0,
+          "unicorn/filename-case": 0,
+          "@typescript-eslint/ban-ts-ignore": 0
+        }
       },
-      "rules": {}
-    }
-  ]
-}
+      {
+        "files": ["*.ts", "*.tsx"],
+        "extends": ["plugin:@nrwl/nx/typescript"],
+        "rules": {
+        }
+      },
+      {
+        "files": ["*.js", "*.jsx"],
+        "extends": ["plugin:@nrwl/nx/javascript"],
+        "rules": {}
+      },
+      {
+        "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+        "env": {
+          "jest": true
+        },
+        "rules": {}
+      }
+    ]
+  }
