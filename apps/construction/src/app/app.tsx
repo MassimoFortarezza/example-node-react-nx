@@ -1,29 +1,39 @@
-import { ChakraProvider } from '@chakra-ui/react';
-import { Message } from '@mf-cos/api-interfaces';
-import React, { useEffect, useState } from 'react';
+import { ChakraProvider, theme } from '@chakra-ui/react';
+import { Provider } from 'react-redux';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-export function App() {
-  const [m, setMessage] = useState<Message>({ message: '' });
+import Overlay from './components/atoms/Overlay';
+import CheckoutModal from './components/organisms/CheckoutModal';
+import Footer from './components/organisms/Footer';
+import Header from './components/organisms/Header';
+import HomePage from './components/templates/HomePage';
+import store from './store';
+import ModalContextProvider from './store/ModalContextProvider';
 
-  useEffect(() => {
-    fetch('/api')
-      .then((r) => r.json())
-      .then(setMessage);
-  }, []);
-
+export default function App(): JSX.Element {
   return (
-    <ChakraProvider>
-      <div style={{ textAlign: 'center' }}>
-        <h1>Welcome to construction!</h1>
-        <img
-          width="450"
-          src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-          alt="Nx - Smart, Fast and Extensible Build System"
-        />
-      </div>
-      <div>{m.message}</div>
-    </ChakraProvider>
+    <BrowserRouter>
+      <ChakraProvider theme={theme} resetCSS>
+        <Provider store={store}>
+          <ModalContextProvider>
+            <>
+              <Header />
+              <Routes>
+                <Route path="/" element={<HomePage />}>
+                  {/* <Route path="teams" element={<Teams />}>
+                  <Route path=":teamId" element={<Team />} />
+                  <Route path="new" element={<NewTeamForm />} />
+                  <Route index element={<LeagueStandings />} />
+                </Route> */}
+                </Route>
+              </Routes>
+              <Footer />
+              <CheckoutModal />
+              <Overlay />
+            </>
+          </ModalContextProvider>
+        </Provider>
+      </ChakraProvider>
+    </BrowserRouter>
   );
 }
-
-export default App;

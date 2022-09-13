@@ -1,0 +1,36 @@
+import { Container, Flex, MenuIcon } from '@chakra-ui/react';
+
+import CartIcon from '../../atoms/CartIcon';
+import Logo from '../../atoms/Logo';
+import NavLinks from '../NavLinks';
+
+const Navbar = (): JSX.Element => {
+  return (
+    <Container maxW="container.lg" px={6}>
+      <Flex
+        justify="space-between"
+        position="relative"
+        zIndex="modal"
+        sx={{
+          '@media screen and (min-width: 30em)': {
+            '&::after': {
+              content: "''",
+              position: 'absolute',
+              bottom: '-2rem',
+              height: '0.0625rem',
+              width: '100%',
+              backgroundColor: 'divider',
+            },
+          },
+        }}
+      >
+        <MenuIcon />
+        <Logo />
+        <NavLinks />
+        <CartIcon />
+      </Flex>
+    </Container>
+  );
+};
+
+export default Navbar;
