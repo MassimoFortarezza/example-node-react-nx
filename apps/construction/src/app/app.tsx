@@ -1,4 +1,4 @@
-import { ChakraProvider, theme } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -9,6 +9,7 @@ import Header from './components/organisms/Header';
 import HomePage from './components/templates/HomePage';
 import store from './store';
 import ModalContextProvider from './store/ModalContextProvider';
+import theme from './styles/theme';
 
 export default function App(): JSX.Element {
   return (

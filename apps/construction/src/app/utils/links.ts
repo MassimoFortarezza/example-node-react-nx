@@ -6,20 +6,20 @@ export const links = [
   },
   {
     id: 2,
-    text: 'Headphones',
+    text: 'Amsterdam',
     url: '/headphones',
-    img: '/images/shared/desktop/image-headphones.png',
+    img: '/assets/images/shared/desktop/image-headphones.png',
   },
   {
     id: 3,
-    text: 'Speakers',
+    text: 'Milan',
     url: '/speakers',
-    img: '/images/shared/desktop/image-speakers.png',
+    img: '/assets/images/shared/desktop/image-speakers.png',
   },
   {
     id: 4,
-    text: 'Earphones',
+    text: 'Berlin',
     url: '/earphones',
-    img: '/images/shared/desktop/image-earphones.png',
+    img: '/assets/images/shared/desktop/image-earphones.png',
   },
-]
+];

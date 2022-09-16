@@ -1,12 +1,5 @@
-import {
-  Box,
-  Button,
-  Heading,
-  Image,
-  Link,
-  Stack,
-  Text,
-} from '@chakra-ui/react';
+import { Box, Button, Heading, Image, Stack, Text } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 import FadeInOnScroll from '../../organisms/FadeInOnScroll';
 
@@ -21,7 +14,7 @@ const ZX9Speaker = (): JSX.Element => {
         pt={{ base: '3.4375rem', lg: '6rem' }}
         pb={{ base: '3.4375rem', lg: 0 }}
         borderRadius="0.5rem"
-        background="url(/images/home/desktop/pattern-circles.svg) no-repeat"
+        background="url(/assets/images/home/desktop/pattern-circles.svg) no-repeat"
         backgroundSize="cover"
         backgroundPosition={{
           base: '50% -8.125rem',
@@ -29,29 +22,30 @@ const ZX9Speaker = (): JSX.Element => {
           lg: '-15rem -9.125rem',
         }}
         backgroundColor="accent"
-        overflow="hidden"
       >
-        <picture>
-          <source
-            media="(min-width: 62em)"
-            srcSet="/images/home/desktop/image-speaker-zx9.png"
-          />
-          <source
-            media="(min-width: 30em)"
-            srcSet="/images/home/tablet/image-speaker-zx9.png"
-          />
-          <Image
-            width={['10.625rem', '12.3125rem', null, '25.625rem']}
-            src="/images/home/mobile/image-speaker-zx9.png"
-            objectFit="cover"
-            mb={{ base: '2rem', lg: 0 }}
-            ml={{ base: 'auto', lg: '7.3125rem' }}
-            mr={['auto']}
-            position="relative"
-            top={{ lg: '.8rem' }}
-            alt=""
-          />
-        </picture>
+        <Box mt={-200}>
+          <picture>
+            <source
+              media="(min-width: 62em)"
+              srcSet="/assets/images/home/desktop/image-speaker-zx9.avif"
+            />
+            <source
+              media="(min-width: 30em)"
+              srcSet="/assets/images/home/tablet/image-speaker-zx9.png"
+            />
+            <Image
+              width={['10.625rem', '12.3125rem', null, '25.625rem']}
+              src="/assets/images/home/mobile/image-speaker-zx9.png"
+              objectFit="cover"
+              mb={{ base: '2rem', lg: 0 }}
+              ml={{ base: 'auto', lg: '7.3125rem' }}
+              mr={['auto']}
+              position="relative"
+              top={{ lg: '.8rem' }}
+              alt=""
+            />
+          </picture>
+        </Box>
         <Box ml={{ lg: '8.625rem' }} marginInlineStart="0" pt={{ lg: '2rem' }}>
           <Heading
             as="h2"
@@ -77,7 +71,7 @@ const ZX9Speaker = (): JSX.Element => {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </Text>
-          <Link href="/speakers/zx9-speaker">
+          <Link to="/speakers/zx9-speaker">
             <Button bg="black" _hover={{ bg: '#4C4C4C' }}>
               See Product
             </Button>

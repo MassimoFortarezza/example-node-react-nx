@@ -1,5 +1,5 @@
-import * as express from 'express';
 import { Message } from '@mf-cos/api-interfaces';
+import * as express from 'express';
 
 const app = express();
 

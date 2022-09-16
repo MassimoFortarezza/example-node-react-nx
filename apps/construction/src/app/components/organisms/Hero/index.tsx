@@ -1,5 +1,6 @@
-import { Box, Button, Container, Heading, Link, Text } from '@chakra-ui/react';
+import { Box, Button, Container, Heading, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Hero = (): JSX.Element => {
   const MotionBox = motion(Box);
@@ -22,7 +23,7 @@ const Hero = (): JSX.Element => {
           content: "''",
           position: 'absolute',
           background:
-            "url('/images/home/mobile/image-hero.jpg') center/contain no-repeat",
+            "url('/assets/images/home/mobile/image-hero.jpeg') center/contain no-repeat",
           width: '100%',
           height: '116%',
           top: '-6rem',
@@ -30,11 +31,13 @@ const Hero = (): JSX.Element => {
           zIndex: '-1',
           '@media screen and (min-width: 30em)': {
             background:
-              "url('/images/home/tablet/image-hero.jpg') center/contain no-repeat",
+              "url('/assets/images/home/tablet/image-hero.jpeg') center/contain no-repeat",
           },
           '@media screen and (min-width: 62em)': {
+            width: '150%',
+            height: '220%',
             background:
-              "url('/images/home/desktop/image-hero.jpg') center/contain no-repeat",
+              "url('/assets/images/home/desktop/image-hero.jpeg') center/contain no-repeat",
           },
         }}
       ></MotionBox>
@@ -69,9 +72,9 @@ const Hero = (): JSX.Element => {
             display="block"
             fontSize="0.875rem"
           >
-            New Product
+            Construction dealer
           </Box>
-          XX99 Mark II Headphones
+          WEBUILD
         </Heading>
         <Text
           color="textLight"
@@ -84,7 +87,7 @@ const Hero = (): JSX.Element => {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </Text>
-        <Link href="/headphones/xx99-mark-two-headphones">
+        <Link to="/headphones/xx99-mark-two-headphones">
           <Button as="a" cursor="pointer">
             See Product
           </Button>

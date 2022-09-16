@@ -1,11 +1,5 @@
-import {
-  Box,
-  Button,
-  Heading,
-  Image,
-  Link,
-  SimpleGrid,
-} from '@chakra-ui/react';
+import { Box, Button, Heading, Image, SimpleGrid } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 import FadeInOnScroll from '../../organisms/FadeInOnScroll';
 
@@ -19,14 +13,14 @@ const YX1Earphones = (): JSX.Element => {
         <Box as="picture" height="100%">
           <source
             media="(min-width: 62em)"
-            srcSet="/images/home/desktop/image-earphones-yx1.jpg"
+            srcSet="/assets/images/home/desktop/image-earphones-yx1.jpg"
           />
           <source
             media="(min-width: 30em)"
-            srcSet="/images/home/tablet/image-earphones-yx1.jpg"
+            srcSet="/assets/images/home/tablet/image-earphones-yx1.jpg"
           />
           <Image
-            src="/images/home/mobile/image-earphones-yx1.jpg"
+            src="/assets/images/home/mobile/image-earphones-yx1.jpg"
             objectFit="cover"
             borderRadius="0.5rem"
             alt=""
@@ -56,7 +50,7 @@ const YX1Earphones = (): JSX.Element => {
             <Heading as="h2" mb="2rem" fontSize="1.75rem" color="black">
               YX1 Earphones
             </Heading>
-            <Link href="/earphones/yx1-earphones">
+            <Link to="/earphones/yx1-earphones">
               <Button variant="secondary">See Product</Button>
             </Link>
           </Box>

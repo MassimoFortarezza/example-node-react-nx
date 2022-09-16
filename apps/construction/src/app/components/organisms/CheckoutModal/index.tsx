@@ -4,7 +4,6 @@ import {
   Flex,
   Heading,
   Image,
-  Link,
   List,
   Modal,
   ModalContent,
@@ -13,6 +12,7 @@ import {
   useBoolean,
 } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import useCartTotals from '../../../hooks/useCartTotals';
 import { cartItems, clearCart } from '../../../store/CartSlice';
@@ -50,7 +50,7 @@ const CheckoutModal = (): JSX.Element => {
         maxWidth={{ sm: '25.6875rem', md: '33.75rem' }}
       >
         <Image
-          src="/images/shared/desktop/icon-check-mark.svg"
+          src="/assets/images/shared/desktop/icon-check-mark.svg"
           boxSize="4rem"
           aria-hidden="true"
           alt=""
@@ -130,7 +130,7 @@ const CheckoutModal = (): JSX.Element => {
             </Text>
           </Flex>
         </Flex>
-        <Link href="/">
+        <Link to="/">
           <Button as="a" cursor="pointer" onClick={handleClick}>
             Back to home
           </Button>

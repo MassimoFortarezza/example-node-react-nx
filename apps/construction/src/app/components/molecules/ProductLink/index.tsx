@@ -1,4 +1,5 @@
-import { Box, Button, Heading, Image, Link } from '@chakra-ui/react';
+import { Box, Button, Heading, Image } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 import { OtherProductsProps } from '../../organisms/OtherProducts';
 
@@ -28,7 +29,7 @@ const ProductLink: React.FC<OtherProductsProps> = ({
       >
         {name}
       </Heading>
-      <Link href={`/${slug}`}>
+      <Link to={`/${slug}`}>
         <Button as="a" cursor="pointer" mt={{ base: '32px' }}>
           See Product
         </Button>

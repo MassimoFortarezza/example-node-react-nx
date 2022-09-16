@@ -20,7 +20,7 @@ export function App() {
           <h1>Welcome to construction!</h1>
           <img
             width="450"
-            src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
+            src="https://raw.githubusercontent.com/nrwl/nx/master/assets/images/nx-logo.png"
             alt="Nx - Smart, Fast and Extensible Build System"
           />
         </Center>

@@ -1,5 +1,6 @@
-import { Box, Link, Stack } from '@chakra-ui/react';
+import { Box, Stack } from '@chakra-ui/react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { links } from '../../../utils/links';
 
@@ -22,7 +23,7 @@ const FooterLinks = (): JSX.Element => {
           color="white"
           textTransform="uppercase"
         >
-          <Link href={link.url}>{link.text}</Link>
+          <Link to={link.url}>{link.text}</Link>
         </Box>
       ))}
     </Stack>

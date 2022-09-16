@@ -1,18 +1,18 @@
-import { extendTheme } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react';
 
-import Button from './components/button'
-import Text from './components/text'
-import Input from './components/input'
+import Button from './components/button';
+import Input from './components/input';
+import Text from './components/text';
 
 const theme = extendTheme({
   colors: {
     bg: '#fafafa',
-    accent: '#d87d4a',
-    accentLight: '#fbaf85',
+    accent: '#FFCE75',
+    accentLight: '#04A3A4',
     gray: '#f1f1f1',
     lightGray: '#d3d3d3',
     white: '#fff',
-    black: '#191919',
+    black: '#000',
     text: 'rgba(0,0,0,0.5)',
     textLight: 'rgba(255,255,255,0.5)',
     divider: 'rgba(255,255,255,0.1)',
@@ -58,6 +58,6 @@ const theme = extendTheme({
       },
     },
   },
-})
+});
 
-export default theme
+export default theme;

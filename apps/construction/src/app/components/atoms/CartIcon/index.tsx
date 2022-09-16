@@ -22,7 +22,7 @@ const CartIcon = (): JSX.Element => {
       fontWeight="normal"
     >
       <img
-        src="/images/shared/desktop/icon-cart.svg"
+        src="/assets/images/shared/desktop/icon-cart.svg"
         width={23}
         height={21}
         aria-hidden="true"

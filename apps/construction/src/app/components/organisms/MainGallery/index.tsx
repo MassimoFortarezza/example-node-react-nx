@@ -7,7 +7,7 @@ import ZX9Speaker from '../../molecules/ZX9Speaker';
 const MainGallery = (): JSX.Element => {
   return (
     <VStack
-      mt="7.5rem"
+      mt="12rem"
       spacing={{ base: '1.5rem', sm: '2rem', lg: '3rem' }}
       align="stretch"
     >

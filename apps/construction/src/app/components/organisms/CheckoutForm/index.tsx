@@ -237,7 +237,7 @@ const CheckoutForm = (): JSX.Element => {
             </SimpleGrid>
           ) : (
             <HStack align="center" spacing="2rem" mt="1.5rem">
-              <Image src="/images/checkout/icon-cash-on-delivery.svg" />
+              <Image src="/assets/images/checkout/icon-cash-on-delivery.svg" />
               <Text>
                 The ‘Cash on Delivery’ option enables you to pay in cash when
                 our delivery courier arrives at your residence. Just make sure

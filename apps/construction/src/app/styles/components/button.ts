@@ -2,7 +2,7 @@ const Button = {
   baseStyle: {
     fontWeight: 'bold',
     textTransform: 'uppercase',
-    borderRadius: 0,
+    borderRadius: 25,
     letterSpacing: '0.0625rem',
   },
   sizes: {
@@ -55,6 +55,6 @@ const Button = {
     variant: 'primary',
     size: 'regular',
   },
-}
+};
 
-export default Button
+export default Button;

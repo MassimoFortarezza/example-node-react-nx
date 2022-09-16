@@ -1,4 +1,5 @@
-import { Box, Heading, HStack, Image, Link, Text } from '@chakra-ui/react';
+import { Box, Heading, HStack, Image, Text } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 const CategoryLink = ({
   text,
@@ -31,7 +32,7 @@ const CategoryLink = ({
         },
       }}
     >
-      <Link href={url}>
+      <Link to={url}>
         <a>
           <Box pt="5.5rem" pb="1.375rem">
             <Image
@@ -66,10 +67,10 @@ const CategoryLink = ({
                 fontSize="0.8125rem"
                 textTransform="uppercase"
               >
-                Shop
+                Search in
               </Text>
               <Image
-                src="/images/shared/desktop/icon-arrow-right.svg"
+                src="/assets/images/shared/desktop/icon-arrow-right.svg"
                 alt=""
                 aria-hidden="true"
               />

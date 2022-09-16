@@ -1,8 +1,9 @@
 import { IconButton } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import CloseMenu from '../../../../assets/images/shared/tablet/icon-close-menu.svg';
+import OpenMenu from '../../../../assets/images/shared/tablet/icon-hamburger.svg';
 import { isNavOpen, toggleNav } from '../../../store/UISlice';
-
 const MenuIcon = (): JSX.Element => {
   const navOpen = useSelector(isNavOpen);
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ const MenuIcon = (): JSX.Element => {
       icon={
         navOpen ? (
           <img
-            src="/images/shared/tablet/icon-close-menu.svg"
+            src={CloseMenu}
             width={16}
             height={15}
             aria-hidden="true"
@@ -29,7 +30,7 @@ const MenuIcon = (): JSX.Element => {
           />
         ) : (
           <img
-            src="/images/shared/tablet/icon-hamburger.svg"
+            src={OpenMenu}
             width={16}
             height={15}
             aria-hidden="true"

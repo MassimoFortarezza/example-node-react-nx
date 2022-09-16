@@ -1,12 +1,5 @@
-import {
-  Box,
-  Button,
-  Heading,
-  Image,
-  Link,
-  Stack,
-  Text,
-} from '@chakra-ui/react';
+import { Box, Button, Heading, Image, Stack, Text } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 import { Product } from '../../../models/Product';
 
@@ -83,7 +76,7 @@ const CategoryPageItem: React.FC<Product> = ({
         >
           {description}
         </Text>
-        <Link href={`/${category}/${slug}`}>
+        <Link to={`/${category}/${slug}`}>
           <Button as="a" cursor="pointer">
             See Product
           </Button>
