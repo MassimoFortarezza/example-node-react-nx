@@ -7,19 +7,19 @@ export const links = [
   {
     id: 2,
     text: 'Amsterdam',
-    url: '/headphones',
+    url: '/companies',
     img: '/assets/images/shared/desktop/image-headphones.png',
   },
   {
     id: 3,
     text: 'Milan',
-    url: '/speakers',
+    url: '/companies',
     img: '/assets/images/shared/desktop/image-speakers.png',
   },
   {
     id: 4,
     text: 'Berlin',
-    url: '/earphones',
+    url: '/companies',
     img: '/assets/images/shared/desktop/image-earphones.png',
   },
 ];

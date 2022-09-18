@@ -11,8 +11,8 @@ export class GetCompanyListFilteredHttpController {
     middlewares: [],
   })
   public async execute(req: Request, res: Response) {
-    const dto = GetCompanyListFilteredRequestDto.build(req.body);
-
+    const dto = GetCompanyListFilteredRequestDto.build(req.query as any);
+    console.log({ dto });
     const [errors, results] = await PromiseUtils.useCatch(
       (async () => {
         const query = new GetCompanyListFilteredQuery(

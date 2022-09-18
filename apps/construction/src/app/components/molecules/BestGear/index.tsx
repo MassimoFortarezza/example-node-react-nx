@@ -39,15 +39,15 @@ const BestGear = (): JSX.Element => {
           <Box as="span" color="accent">
             best
           </Box>{' '}
-          audio gear
+          building gear
         </Heading>
         <Text px={{ sm: '2rem', md: '6rem', lg: 0 }} pr={{ lg: '3rem' }}>
-          Located at the heart of New York City, BuildConnect is the premier
-          store for high end headphones, earphones, speakers, and audio
-          accessories. We have a large showroom and luxury demonstration rooms
-          available for you to browse and experience a wide range of our
-          products. Stop by our store to meet some of the fantastic people who
-          make BuildConnect the best place to buy your portable audio equipment.
+          Simply dummy text of the printing and typesetting industry. Lorem
+          Ipsum has been the industry's standard dummy text ever since the
+          1500s, when an unknown printer took a galley of type and scrambled it
+          to make a type specimen book. It has survived not only five centuries,
+          but also the leap into electronic typesetting, remaining essentially
+          unchanged. It was popularised in the 1960s.
         </Text>
       </Box>
     </Stack>

@@ -1,17 +1,19 @@
 import {
-  TaConstructionCompanyName,
+  CompanyListFilteredRequestDto,
   TaSpecialities,
-} from '../../../../_shared/type.alias';
+} from '@mf-cos/api-interfaces';
+
 import { GetCompanyListFilteredPort } from './get-company-list-filtered.query.port';
 
-type Dto = {
-  inputText: TaConstructionCompanyName;
-  specialities: TaSpecialities[];
-};
-
 export class GetCompanyListFilteredRequestDto {
-  public static build = (props: Dto): GetCompanyListFilteredPort => ({
+  public static build = (
+    props: CompanyListFilteredRequestDto,
+  ): GetCompanyListFilteredPort => ({
     constructionCompanyName: props.inputText,
-    companySpecialities: props.specialities,
+    companySpecialities: props.specialities
+      ? ((props.specialities as unknown as string).split(
+          ',',
+        ) as TaSpecialities[])
+      : [],
   });
 }

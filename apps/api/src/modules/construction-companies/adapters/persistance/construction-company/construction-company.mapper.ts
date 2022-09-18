@@ -1,6 +1,8 @@
+import { TaCity, TaSpecialities } from '@mf-cos/api-interfaces';
+
 import { CompanyTable } from '../../../../../database';
-import { TaSpecialities } from '../../../../_shared/type.alias';
 import { ConstructionCompanyEntity } from '../../../core/domain/models/company/company.entity';
+import { CityVo } from '../../../core/domain/models/company/value-objects/city.vo';
 import { SpecialityVo } from '../../../core/domain/models/company/value-objects/speciality.vo';
 
 export class ConstructionCompanyMapper {
@@ -13,18 +15,18 @@ export class ConstructionCompanyMapper {
             value: speciality as unknown as TaSpecialities,
           }),
         ),
+        city: CityVo.build({ value: orm.city as unknown as TaCity }),
       },
       String(orm.id),
     );
   }
 
   public static toPersistance(companyDomain: ConstructionCompanyEntity) {
-    console.log(companyDomain.toObject().specialities);
     const company: CompanyTable = {
       name: companyDomain.name,
       id: companyDomain.id,
-      specialities: companyDomain.toObject()
-        .specialities as unknown as string[], // TODO: check and remove unknown
+      city: companyDomain.city as unknown as string,
+      specialities: companyDomain.specialities as unknown as string[], // TODO: check and remove unknown
     };
 
     return company;

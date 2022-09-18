@@ -1,7 +1,7 @@
+import { TaSpecialities } from '@mf-cos/api-interfaces';
 import { NotFoundException, PromiseUtils } from '@mf-cos/server';
 
 import { CompanyTable } from '../../../../../database';
-import { TaSpecialities } from '../../../../_shared/type.alias';
 import { ConstructionCompanyEntity } from '../../../core/domain/models/company/company.entity';
 import { ConstructionCompanyMapper } from './construction-company.mapper';
 import { IConstructionCompaniesRepositoryPort } from './construction-company.repository.port';
@@ -20,15 +20,22 @@ export class ConstructionCompanyRepository
   ): Promise<ConstructionCompanyEntity[]> {
     // THIS SHOULD USUALLY BE A ORM FUNCTION => this.orm.find................................
     const query = async () => {
-      const companiesFound = this.uow.filter(
-        (company: CompanyTable) =>
-          company.name === companyNameToSearch &&
-          requestedSpecialities.some((speciality) =>
-            company.specialities.some(
-              (companySpecialities) => companySpecialities === speciality,
-            ),
-          ),
-      );
+      const companiesFound = this.uow.filter((company: CompanyTable) => {
+        return (
+          (!companyNameToSearch ||
+            company.name
+              .toLocaleLowerCase()
+              .includes(companyNameToSearch.toLocaleLowerCase())) &&
+          (!requestedSpecialities?.length ||
+            requestedSpecialities.every((speciality) =>
+              company.specialities.some(
+                (companySpecialities) =>
+                  companySpecialities.toLocaleLowerCase() ===
+                  speciality.toLocaleLowerCase(),
+              ),
+            ))
+        );
+      });
 
       if (!companiesFound.length) {
         throw new NotFoundException({

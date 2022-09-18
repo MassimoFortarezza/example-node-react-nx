@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import FadeInOnScroll from '../../organisms/FadeInOnScroll';
 
-const ZX9Speaker = (): JSX.Element => {
+const FirstHomeExtra = (): JSX.Element => {
   return (
     <FadeInOnScroll>
       <Stack
@@ -50,14 +50,14 @@ const ZX9Speaker = (): JSX.Element => {
           <Heading
             as="h2"
             color="white"
-            maxWidth={['10ch']}
+            maxWidth={['11ch']}
             mx={{ base: 'auto', lg: 'unset' }}
             mb="1.5rem"
             fontSize={['2.25rem', '3.5rem']}
             letterSpacing={['0.0806em', '0.125em']}
             lineHeight="1"
           >
-            ZX9 Speaker
+            Builders
           </Heading>
           <Text
             color="rgba(255,255,255, 0.75)"
@@ -68,12 +68,13 @@ const ZX9Speaker = (): JSX.Element => {
             fontWeight="thin"
             lineHeight="1.56"
           >
-            Upgrade to premium speakers that are phenomenally built to deliver
-            truly remarkable sound.
+            Choose from the best builders in the area. is simply dummy text of
+            the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s.
           </Text>
-          <Link to="/speakers/zx9-speaker">
+          <Link to="/companies">
             <Button bg="black" _hover={{ bg: '#4C4C4C' }}>
-              See Product
+              See Companies
             </Button>
           </Link>
         </Box>
@@ -82,4 +83,4 @@ const ZX9Speaker = (): JSX.Element => {
   );
 };
 
-export default ZX9Speaker;
+export default FirstHomeExtra;

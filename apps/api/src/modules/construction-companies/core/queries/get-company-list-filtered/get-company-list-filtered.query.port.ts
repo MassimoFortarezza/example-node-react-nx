@@ -1,7 +1,7 @@
 import {
   TaConstructionCompanyName,
   TaSpecialities,
-} from '../../../../_shared/type.alias';
+} from '@mf-cos/api-interfaces';
 
 export type GetCompanyListFilteredPort = {
   constructionCompanyName: TaConstructionCompanyName;

@@ -1,18 +1,22 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import { saveCart } from '../utils/localStorage';
-import cartReducer from './CartSlice';
+import { companiesApi } from '../api/companiesApi';
+import { saveSearch } from '../utils/localStorage';
+import searchReducer from './SearchSlice';
 import uiReducer from './UISlice';
 
 const store = configureStore({
   reducer: {
-    cart: cartReducer,
+    search: searchReducer,
     ui: uiReducer,
+    [companiesApi.reducerPath]: companiesApi.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(companiesApi.middleware),
 });
 
 store.subscribe(() => {
-  saveCart(store.getState().cart);
+  saveSearch(store.getState().search);
 });
 
 export type RootState = ReturnType<typeof store.getState>;

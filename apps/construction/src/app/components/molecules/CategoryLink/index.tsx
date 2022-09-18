@@ -67,7 +67,7 @@ const CategoryLink = ({
                 fontSize="0.8125rem"
                 textTransform="uppercase"
               >
-                Search in
+                Go
               </Text>
               <Image
                 src="/assets/images/shared/desktop/icon-arrow-right.svg"

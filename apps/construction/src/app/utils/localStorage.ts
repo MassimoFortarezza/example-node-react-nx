@@ -1,22 +1,22 @@
-import { CartSlice } from '../store/CartSlice';
+import { SearchSlice } from '../store/SearchSlice';
 
-export const loadCart = (): CartSlice | undefined => {
+export const loadSearch = (): SearchSlice | undefined => {
   try {
-    const serializedCart = localStorage.getItem('cart');
-    if (serializedCart === null) {
+    const serializedSearch = localStorage.getItem('search');
+    if (serializedSearch === null) {
       return undefined;
     }
-    return JSON.parse(serializedCart);
+    return JSON.parse(serializedSearch);
   } catch (err) {
     return undefined;
   }
 };
 
-export const saveCart = (cart: CartSlice): void => {
+export const saveSearch = (search: SearchSlice): void => {
   try {
-    const serializedCart = JSON.stringify(cart);
-    localStorage.setItem('cart', serializedCart);
+    const serializedSearch = JSON.stringify(search);
+    localStorage.setItem('search', serializedSearch);
   } catch (err) {
-    console.log('error while saving cart to local storage', err);
+    console.log('error while saving search to local storage', err);
   }
 };

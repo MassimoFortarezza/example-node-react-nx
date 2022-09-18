@@ -31,7 +31,7 @@ const ProductLink: React.FC<OtherProductsProps> = ({
       </Heading>
       <Link to={`/${slug}`}>
         <Button as="a" cursor="pointer" mt={{ base: '32px' }}>
-          See Product
+          See Companies
         </Button>
       </Link>
     </Box>

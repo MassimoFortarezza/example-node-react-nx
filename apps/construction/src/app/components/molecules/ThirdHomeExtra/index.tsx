@@ -1,9 +1,16 @@
-import { Box, Button, Heading, Image, SimpleGrid } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  Heading,
+  Image,
+  SimpleGrid,
+  Text,
+} from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
 import FadeInOnScroll from '../../organisms/FadeInOnScroll';
 
-const YX1Earphones = (): JSX.Element => {
+const ThirdHomeExtra = (): JSX.Element => {
   return (
     <SimpleGrid
       columns={[1, 2]}
@@ -13,7 +20,7 @@ const YX1Earphones = (): JSX.Element => {
         <Box as="picture" height="100%">
           <source
             media="(min-width: 62em)"
-            srcSet="/assets/images/home/desktop/image-earphones-yx1.jpg"
+            srcSet="/assets/images/home/desktop/image-earphones-yx1.avif"
           />
           <source
             media="(min-width: 30em)"
@@ -48,10 +55,20 @@ const YX1Earphones = (): JSX.Element => {
             pr={{ sm: '1rem' }}
           >
             <Heading as="h2" mb="2rem" fontSize="1.75rem" color="black">
-              YX1 Earphones
+              Electricians
             </Heading>
-            <Link to="/earphones/yx1-earphones">
-              <Button variant="secondary">See Product</Button>
+            <Text
+              maxWidth={['30ch', '42ch', null, '38ch']}
+              mx={{ base: 'auto', lg: 'unset' }}
+              mb={{ base: '4.0625rem', lg: '2.5rem' }}
+              fontSize="0.9375rem"
+              fontWeight="thin"
+              lineHeight="1.56"
+            >
+              Choose from the best Electricians in the area.
+            </Text>
+            <Link to="/companies">
+              <Button variant="secondary">See Companies</Button>
             </Link>
           </Box>
         </Box>
@@ -60,4 +77,4 @@ const YX1Earphones = (): JSX.Element => {
   );
 };
 
-export default YX1Earphones;
+export default ThirdHomeExtra;

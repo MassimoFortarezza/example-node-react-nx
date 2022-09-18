@@ -1,9 +1,9 @@
-import { Box, Button, Heading, Image } from '@chakra-ui/react';
+import { Box, Button, Heading, Image, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
 import FadeInOnScroll from '../../organisms/FadeInOnScroll';
 
-const ZX7Speaker = (): JSX.Element => {
+const SecondHomeExtra = (): JSX.Element => {
   return (
     <FadeInOnScroll>
       <Box
@@ -12,11 +12,11 @@ const ZX7Speaker = (): JSX.Element => {
         position="relative"
         mt="6rem"
       >
-        <Box mt={-30}>
+        <Box mt={-30} height={'300px'}>
           <picture>
             <source
               media="(min-width: 62em)"
-              srcSet="/assets/images/home/desktop/image-speaker-zx7.jpg"
+              srcSet="/assets/images/home/desktop/image-speaker-zx7.avif"
             />
             <source
               media="(min-width: 30em)"
@@ -36,11 +36,21 @@ const ZX7Speaker = (): JSX.Element => {
           left={{ base: '1.5rem', sm: '3.875rem', lg: '5.9375rem' }}
           transform="translateY(-50%)"
         >
-          <Heading mb="2rem" fontSize="1.75rem" color="black">
-            ZX7 Speaker
+          <Heading fontSize="1.75rem" color="black">
+            Plumbers
           </Heading>
-          <Link to="/speakers/zx7-speaker">
-            <Button variant="secondary">See Product</Button>
+          <Text
+            maxWidth={['30ch', '42ch', null, '38ch']}
+            mx={{ base: 'auto', lg: 'unset' }}
+            mb={{ base: '4.0625rem', lg: '2.5rem' }}
+            fontSize="0.9375rem"
+            fontWeight="thin"
+            lineHeight="1.56"
+          >
+            Choose from the best Plumbers in the area.
+          </Text>
+          <Link to="/companies">
+            <Button variant="secondary">See Companies</Button>
           </Link>
         </Box>
       </Box>
@@ -48,4 +58,4 @@ const ZX7Speaker = (): JSX.Element => {
   );
 };
 
-export default ZX7Speaker;
+export default SecondHomeExtra;

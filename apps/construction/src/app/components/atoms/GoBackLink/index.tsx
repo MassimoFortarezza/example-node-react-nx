@@ -9,7 +9,7 @@ const GoBackLink = (): JSX.Element => {
       as="a"
       variant="link"
       onClick={() => navigate(-1)}
-      mt={{ base: '1rem', sm: '2rem', lg: '5rem' }}
+      mt={{ base: '1rem', sm: '2rem', lg: '2rem' }}
       fontSize="0.9375rem"
       textTransform="capitalize"
     >

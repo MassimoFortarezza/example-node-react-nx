@@ -1,7 +1,8 @@
 import {
   TaConstructionCompanyName,
   TaSpecialities,
-} from '../../../../_shared/type.alias';
+} from '@mf-cos/api-interfaces';
+
 import { ConstructionCompanyEntity } from '../../../core/domain/models/company/company.entity';
 
 export interface IConstructionCompaniesRepositoryPort {

@@ -2,30 +2,32 @@
     {
         "id": "0",
         "name": "Plumbing Company SAGL",
+        "city": "Milan",
         "specialities" : ["Plumbing"]
     }, {
         "id": "1",
-        "name": "Plumbing Company SAGL",
-        "specialities" : ["Plumbing"]
+        "name": "Building Company SAGL",
+        "city": "Milan",
+        "specialities" : ["Building"]
     }, {
         "id": "2",
-        "name": "Plumbing Company SAGL",
-        "specialities" : ["Plumbing"]
+        "name": "Electrician Company SAGL",
+        "city": "Milan",
+        "specialities" : ["Electrician"]
     }, {
         "id": "3",
-        "name": "Plumbing Company SAGL",
-        "specialities" : ["Plumbing"]
+        "name": "Plumbing & Building Company SAGL",
+        "city": "Milan",
+        "specialities" : ["Plumbing", "Building"]
     }, {
         "id": "4",
-        "name": "Plumbing Company SAGL",
-        "specialities" : ["Plumbing"]
+        "name": "Plumbing & Electrician Company SAGL",
+        "city": "Milan",
+        "specialities" : ["Plumbing", "Electrician"]
     }, {
         "id": "5",
-        "name": "Plumbing Company SAGL",
-        "specialities" : ["Plumbing"]
-    }, {
-        "id": "6",
-        "name": "Plumbing Company SAGL",
-        "specialities" : ["Plumbing"]
+        "name": "Building & Electrician Company SAGL",
+        "city": "Milan",
+        "specialities" : ["Building", "Electrician"]
     }
 ]

@@ -5,15 +5,7 @@ import CategoryLink from '../../molecules/CategoryLink';
 
 const CategoriesLinks = (): JSX.Element => {
   return (
-    <Box mt={['4rem', '6em', '8em']}>
-      <Heading
-        textAlign="center"
-        as="h2"
-        fontSize={{ base: '0.9375rem', lg: '1.125rem' }}
-        letterSpacing={{ base: '0.0669em', lg: '0.0806em' }}
-      >
-        Choose your city
-      </Heading>
+    <Box mt={['3rem', '4em', '5em']}>
       <Stack
         as="ul"
         direction={['column', 'row']}

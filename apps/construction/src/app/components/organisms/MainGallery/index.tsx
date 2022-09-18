@@ -1,19 +1,19 @@
 import { VStack } from '@chakra-ui/react';
 
-import YX1Earphones from '../../molecules/YX1Earphones';
-import ZX7Speaker from '../../molecules/ZX7Speaker';
-import ZX9Speaker from '../../molecules/ZX9Speaker';
+import FirstHomeExtra from '../../molecules/FirstHomeExtra';
+import SecondHomeExtra from '../../molecules/SecondHomeExtra';
+import ThirdHomeExtra from '../../molecules/ThirdHomeExtra';
 
 const MainGallery = (): JSX.Element => {
   return (
     <VStack
-      mt="12rem"
+      mt="15rem"
       spacing={{ base: '1.5rem', sm: '2rem', lg: '3rem' }}
       align="stretch"
     >
-      <ZX9Speaker />
-      <ZX7Speaker />
-      <YX1Earphones />
+      <FirstHomeExtra />
+      <SecondHomeExtra />
+      <ThirdHomeExtra />
     </VStack>
   );
 };

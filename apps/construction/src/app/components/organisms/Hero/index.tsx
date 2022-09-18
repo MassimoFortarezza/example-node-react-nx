@@ -1,4 +1,15 @@
-import { Box, Button, Container, Heading, Text } from '@chakra-ui/react';
+import { SearchIcon } from '@chakra-ui/icons';
+import {
+  Box,
+  Button,
+  Container,
+  Heading,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  InputRightElement,
+  Text,
+} from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -25,7 +36,7 @@ const Hero = (): JSX.Element => {
           background:
             "url('/assets/images/home/mobile/image-hero.jpeg') center/contain no-repeat",
           width: '100%',
-          height: '116%',
+          height: '80%',
           top: '-6rem',
           left: 0,
           zIndex: '-1',
@@ -55,7 +66,7 @@ const Hero = (): JSX.Element => {
       >
         <Heading
           as="h1"
-          fontSize={['2.25rem', '3.5rem']}
+          fontSize={['2rem', '3.0rem']}
           color="white"
           maxWidth="15ch"
           mx={{ base: 'auto', lg: 0 }}
@@ -68,30 +79,49 @@ const Hero = (): JSX.Element => {
             color="textLight"
             textTransform="uppercase"
             mb={4}
-            letterSpacing="0.625rem"
+            letterSpacing="0.525rem"
             display="block"
             fontSize="0.875rem"
           >
-            Construction dealer
+            Build
           </Box>
-          WEBUILD
+          Your <Box color="accent">dream project</Box>
         </Heading>
         <Text
           color="textLight"
           fontSize="0.9375rem"
           maxWidth="38ch"
           mx={{ base: 'auto', lg: 0 }}
-          mb={10}
+          mb={5}
           lineHeight="1.7"
         >
-          Experience natural, lifelike audio and exceptional build quality made
-          for the passionate music enthusiast.
+          Find a partner to help you realize your projects.
         </Text>
-        <Link to="/headphones/xx99-mark-two-headphones">
-          <Button as="a" cursor="pointer">
-            See Product
-          </Button>
-        </Link>
+        <Box width={{ base: '100%', lg: '30%' }} mb={4}>
+          <InputGroup>
+            <Input
+              backgroundColor="white"
+              placeholder="Plumbing SAGL"
+              autoFocus
+              borderRadius={25}
+              focusBorderColor="accent"
+            />
+            <InputRightElement
+              borderBottomEndRadius={25}
+              borderTopEndRadius={25}
+              children={
+                <Button
+                  pl={3}
+                  pr={4}
+                  borderBottomStartRadius={0}
+                  borderTopStartRadius={0}
+                >
+                  <SearchIcon color="textLight" height="100%" />
+                </Button>
+              }
+            />
+          </InputGroup>
+        </Box>
       </MotionContainer>
     </MotionBox>
   );

@@ -12,7 +12,7 @@ export function handleError(
 ) {
   let error: BaseException;
 
-  if (!err.getStatusCode()) {
+  if (!err.getStatusCode?.()) {
     error = Exception.new({
       status: 'INTERNAL_SERVER_ERROR',
       message: err.message,

@@ -1,6 +1,5 @@
+import { TaSpecialities } from '@mf-cos/api-interfaces';
 import { ValidationBuilder, ValueObject } from '@mf-cos/ddd';
-
-import { TaSpecialities } from '../../../../../../_shared/type.alias';
 
 type Slots = {
   value: TaSpecialities;
