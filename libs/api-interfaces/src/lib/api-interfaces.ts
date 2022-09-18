@@ -1,3 +1,5 @@
-export interface Message {
-  message: string;
-}
+export type GetCompanyListFilteredResponse = {
+  id: string;
+  name: string;
+  specialities: string[];
+}[];

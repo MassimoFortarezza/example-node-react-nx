@@ -1,16 +1,19 @@
-import { Message } from '@mf-cos/api-interfaces';
-import * as express from 'express';
+import 'reflect-metadata';
 
-const app = express();
+import { LoggerService, Server } from '@mf-cos/server';
 
-const greeting: Message = { message: 'Welcome to api!' };
+import { APP_CONFIG } from './infrastructure/configurations';
+import { ConstructionCompaniesModule } from './modules/construction-companies/core';
 
-app.get('/api', (req, res) => {
-  res.send(greeting);
+async function bootstrap() {
+  const server = new Server();
+
+  server.create();
+  server.registerApiController([
+    ...ConstructionCompaniesModule.httpControllers,
+  ]);
+  server.listen(APP_CONFIG.PORT);
+}
+bootstrap().catch((err) => {
+  LoggerService.error(`[error run app]:${JSON.stringify(err)}`);
 });
-
-const port = process.env.port || 3333;
-const server = app.listen(port, () => {
-  console.log('Listening at http://localhost:' + port + '/api');
-});
-server.on('error', console.error);

@@ -1,0 +1,31 @@
+[
+    {
+        "id": "0",
+        "name": "Plumbing Company SAGL",
+        "specialities" : ["Plumbing"]
+    }, {
+        "id": "1",
+        "name": "Plumbing Company SAGL",
+        "specialities" : ["Plumbing"]
+    }, {
+        "id": "2",
+        "name": "Plumbing Company SAGL",
+        "specialities" : ["Plumbing"]
+    }, {
+        "id": "3",
+        "name": "Plumbing Company SAGL",
+        "specialities" : ["Plumbing"]
+    }, {
+        "id": "4",
+        "name": "Plumbing Company SAGL",
+        "specialities" : ["Plumbing"]
+    }, {
+        "id": "5",
+        "name": "Plumbing Company SAGL",
+        "specialities" : ["Plumbing"]
+    }, {
+        "id": "6",
+        "name": "Plumbing Company SAGL",
+        "specialities" : ["Plumbing"]
+    }
+]

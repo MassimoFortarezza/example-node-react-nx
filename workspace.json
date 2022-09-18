@@ -5,6 +5,8 @@
     "api": "apps/api",
     "api-interfaces": "libs/api-interfaces",
     "construction": "apps/construction",
-    "construction-e2e": "apps/construction-e2e"
+    "construction-e2e": "apps/construction-e2e",
+    "ddd": "libs/ddd",
+    "server": "libs/server"
   }
 }
