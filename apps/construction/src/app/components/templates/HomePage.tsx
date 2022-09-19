@@ -1,7 +1,7 @@
 import { Container } from '@chakra-ui/react';
 
 import AnimatedBestGear from '../molecules/AnimatedBestGear';
-import CategoriesLinks from '../organisms/CategoriesLinks';
+import CategoriesLinks from '../organisms/CitySelections';
 import Header from '../organisms/Header';
 import Hero from '../organisms/Hero';
 import MainGallery from '../organisms/MainGallery';

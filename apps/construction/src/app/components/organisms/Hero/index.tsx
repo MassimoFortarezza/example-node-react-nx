@@ -1,21 +1,12 @@
-import { SearchIcon } from '@chakra-ui/icons';
-import {
-  Box,
-  Button,
-  Container,
-  Heading,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  InputRightElement,
-  Text,
-} from '@chakra-ui/react';
+import { Box, Container, Heading, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+
+import { Search } from '../../molecules/Search';
 
 const Hero = (): JSX.Element => {
   const MotionBox = motion(Box);
   const MotionContainer = motion(Container);
+
   return (
     <MotionBox
       position="relative"
@@ -98,29 +89,7 @@ const Hero = (): JSX.Element => {
           Find a partner to help you realize your projects.
         </Text>
         <Box width={{ base: '100%', lg: '30%' }} mb={4}>
-          <InputGroup>
-            <Input
-              backgroundColor="white"
-              placeholder="Plumbing SAGL"
-              autoFocus
-              borderRadius={25}
-              focusBorderColor="accent"
-            />
-            <InputRightElement
-              borderBottomEndRadius={25}
-              borderTopEndRadius={25}
-              children={
-                <Button
-                  pl={3}
-                  pr={4}
-                  borderBottomStartRadius={0}
-                  borderTopStartRadius={0}
-                >
-                  <SearchIcon color="textLight" height="100%" />
-                </Button>
-              }
-            />
-          </InputGroup>
+          <Search />
         </Box>
       </MotionContainer>
     </MotionBox>

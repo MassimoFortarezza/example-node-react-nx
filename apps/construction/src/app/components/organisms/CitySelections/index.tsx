@@ -1,9 +1,9 @@
-import { Box, Heading, Stack } from '@chakra-ui/react';
+import { Box, Stack } from '@chakra-ui/react';
 
 import { links } from '../../../utils/links';
-import CategoryLink from '../../molecules/CategoryLink';
+import CitySelection from '../../molecules/CitySelection';
 
-const CategoriesLinks = (): JSX.Element => {
+const CitySelections = (): JSX.Element => {
   return (
     <Box mt={['3rem', '4em', '5em']}>
       <Stack
@@ -13,11 +13,11 @@ const CategoriesLinks = (): JSX.Element => {
         mt={'8rem'}
       >
         {links.slice(1).map((link) => (
-          <CategoryLink {...link} key={link.id} />
+          <CitySelection {...link} key={link.id} />
         ))}
       </Stack>
     </Box>
   );
 };
 
-export default CategoriesLinks;
+export default CitySelections;

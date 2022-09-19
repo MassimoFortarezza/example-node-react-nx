@@ -9,7 +9,11 @@ import {
 } from '@chakra-ui/react';
 import { TaCompany } from '@mf-cos/api-interfaces';
 
-const Company: React.FC<TaCompany> = ({ name, specialities }): JSX.Element => {
+const Company: React.FC<TaCompany> = ({
+  id,
+  name,
+  specialities,
+}): JSX.Element => {
   return (
     <Stack
       spacing={{ base: '1rem', lg: '0' }}
@@ -69,8 +73,10 @@ const Company: React.FC<TaCompany> = ({ name, specialities }): JSX.Element => {
         >
           {name}
         </Heading>
-        {specialities.map((speciality) => (
-          <Badge colorScheme="green">{speciality}</Badge>
+        {specialities.map((speciality, index) => (
+          <Badge key={index + id} colorScheme="green">
+            {speciality}
+          </Badge>
         ))}
         <Spacer height={'.5rem'} />
         <Text

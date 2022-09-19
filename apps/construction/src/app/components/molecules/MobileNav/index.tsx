@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 import { isNavOpen } from '../../../store/UISlice';
 import { links } from '../../../utils/links';
-import CategoryLink from '../CategoryLink';
+import CitySelection from '../CitySelection';
 
 const MobileNav = (): JSX.Element => {
   const navOpen = useSelector(isNavOpen);
@@ -31,7 +31,7 @@ const MobileNav = (): JSX.Element => {
         mt={['5.75rem']}
       >
         {links.slice(1).map((link) => (
-          <CategoryLink {...link} key={link.id} />
+          <CitySelection {...link} key={link.id} />
         ))}
       </Stack>
     </Box>

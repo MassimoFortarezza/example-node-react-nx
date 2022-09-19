@@ -10,19 +10,11 @@ const BestGear = (): JSX.Element => {
       alignItems={{ lg: 'center' }}
     >
       <Box as="picture" flex="1" order={{ lg: 1 }} ml={{ lg: '1.875rem' }}>
-        <source
-          media="(min-width: 62em)"
-          srcSet="/assets/images/shared/desktop/image-best-gear.jpeg"
-        />
-        <source
-          media="(min-width: 30em)"
-          srcSet="/assets/images/shared/tablet/image-best-gear.jpeg"
-        />
         <Image
-          src="/assets/images/shared/mobile/image-best-gear.jpeg"
+          src="/assets/images/shared/desktop/image-best-gear.jpeg"
           objectFit="cover"
           borderRadius="0.5rem"
-          alt="man listening to music with headphones"
+          alt="best gear"
         />
       </Box>
       <Box flex="1" marginStart={{ lg: 0 }}>

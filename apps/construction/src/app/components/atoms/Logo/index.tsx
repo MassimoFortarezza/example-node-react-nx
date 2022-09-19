@@ -10,7 +10,7 @@ const Logo = (): JSX.Element => {
           src="/assets/images/shared/desktop/logo.png"
           height={25}
           width={124}
-          alt="BuildConnect logo - Home"
+          alt="logo - Home"
         />
       </Link>
     </Box>

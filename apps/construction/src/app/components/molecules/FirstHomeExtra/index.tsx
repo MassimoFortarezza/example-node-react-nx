@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 
 import FadeInOnScroll from '../../organisms/FadeInOnScroll';
 
-const FirstHomeExtra = (): JSX.Element => {
+const FirstHomeExtra: React.FC<{
+  setSpeciality: () => void;
+}> = ({ setSpeciality }) => {
   return (
     <FadeInOnScroll>
       <Stack
@@ -73,7 +75,11 @@ const FirstHomeExtra = (): JSX.Element => {
             industry's standard dummy text ever since the 1500s.
           </Text>
           <Link to="/companies">
-            <Button bg="black" _hover={{ bg: '#4C4C4C' }}>
+            <Button
+              bg="black"
+              _hover={{ bg: '#4C4C4C' }}
+              onClick={setSpeciality}
+            >
               See Companies
             </Button>
           </Link>

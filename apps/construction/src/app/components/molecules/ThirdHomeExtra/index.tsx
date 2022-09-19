@@ -10,7 +10,9 @@ import { Link } from 'react-router-dom';
 
 import FadeInOnScroll from '../../organisms/FadeInOnScroll';
 
-const ThirdHomeExtra = (): JSX.Element => {
+const ThirdHomeExtra: React.FC<{
+  setSpeciality: () => void;
+}> = ({ setSpeciality }) => {
   return (
     <SimpleGrid
       columns={[1, 2]}
@@ -68,7 +70,9 @@ const ThirdHomeExtra = (): JSX.Element => {
               Choose from the best Electricians in the area.
             </Text>
             <Link to="/companies">
-              <Button variant="secondary">See Companies</Button>
+              <Button variant="secondary" onClick={setSpeciality}>
+                See Companies
+              </Button>
             </Link>
           </Box>
         </Box>

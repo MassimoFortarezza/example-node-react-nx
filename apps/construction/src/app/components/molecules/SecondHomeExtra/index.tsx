@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 
 import FadeInOnScroll from '../../organisms/FadeInOnScroll';
 
-const SecondHomeExtra = (): JSX.Element => {
+const SecondHomeExtra: React.FC<{
+  setSpeciality: () => void;
+}> = ({ setSpeciality }) => {
   return (
     <FadeInOnScroll>
       <Box
@@ -50,7 +52,9 @@ const SecondHomeExtra = (): JSX.Element => {
             Choose from the best Plumbers in the area.
           </Text>
           <Link to="/companies">
-            <Button variant="secondary">See Companies</Button>
+            <Button variant="secondary" onClick={setSpeciality}>
+              See Companies
+            </Button>
           </Link>
         </Box>
       </Box>
