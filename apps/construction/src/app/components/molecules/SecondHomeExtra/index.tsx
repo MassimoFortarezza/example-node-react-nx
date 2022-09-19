@@ -16,16 +16,8 @@ const SecondHomeExtra: React.FC<{
       >
         <Box mt={-30} height={'300px'}>
           <picture>
-            <source
-              media="(min-width: 62em)"
-              srcSet="/assets/images/home/desktop/image-speaker-zx7.avif"
-            />
-            <source
-              media="(min-width: 30em)"
-              srcSet="/assets/images/home/tablet/image-speaker-zx7.jpg"
-            />
             <Image
-              src="/assets/images/home/mobile/image-speaker-zx7.jpg"
+              src="/assets/images/home/desktop/plumbing.avif"
               objectFit="cover"
               width="100%"
               alt=""

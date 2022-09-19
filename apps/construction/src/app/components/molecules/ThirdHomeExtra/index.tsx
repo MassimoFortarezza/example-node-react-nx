@@ -20,16 +20,8 @@ const ThirdHomeExtra: React.FC<{
     >
       <FadeInOnScroll>
         <Box as="picture" height="100%">
-          <source
-            media="(min-width: 62em)"
-            srcSet="/assets/images/home/desktop/image-earphones-yx1.avif"
-          />
-          <source
-            media="(min-width: 30em)"
-            srcSet="/assets/images/home/tablet/image-earphones-yx1.jpg"
-          />
           <Image
-            src="/assets/images/home/mobile/image-earphones-yx1.jpg"
+            src="/assets/images/home/desktop/electricians.avif"
             objectFit="cover"
             borderRadius="0.5rem"
             alt=""

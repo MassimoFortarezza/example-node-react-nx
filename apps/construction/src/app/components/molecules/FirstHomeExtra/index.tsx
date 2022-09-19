@@ -27,17 +27,9 @@ const FirstHomeExtra: React.FC<{
       >
         <Box mt={-200}>
           <picture>
-            <source
-              media="(min-width: 62em)"
-              srcSet="/assets/images/home/desktop/image-speaker-zx9.avif"
-            />
-            <source
-              media="(min-width: 30em)"
-              srcSet="/assets/images/home/tablet/image-speaker-zx9.png"
-            />
             <Image
               width={['10.625rem', '12.3125rem', null, '25.625rem']}
-              src="/assets/images/home/mobile/image-speaker-zx9.png"
+              src="/assets/images/home/desktop/building.avif"
               objectFit="cover"
               mb={{ base: '2rem', lg: 0 }}
               ml={{ base: 'auto', lg: '7.3125rem' }}
