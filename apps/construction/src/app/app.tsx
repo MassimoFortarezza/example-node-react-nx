@@ -7,7 +7,6 @@ import Footer from './components/organisms/Footer';
 import HomePage from './components/templates/HomePage';
 import ListCompanies from './components/templates/ListCompanies';
 import store from './store';
-import ModalContextProvider from './store/ModalContextProvider';
 import theme from './styles/theme';
 
 export default function App(): JSX.Element {
@@ -15,22 +14,20 @@ export default function App(): JSX.Element {
     <BrowserRouter>
       <ChakraProvider theme={theme} resetCSS>
         <Provider store={store}>
-          <ModalContextProvider>
-            <>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="companies" element={<ListCompanies />} />
-                {/* <Route path="companies" element={<ListCompanies />}>
+          <>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="companies" element={<ListCompanies />} />
+              {/* <Route path="companies" element={<ListCompanies />}>
                     <Route path=":speciality" element={<ListCompanies />} /> */}
-                {/* <Route path=":companyName" element={<Team />} />
+              {/* <Route path=":companyName" element={<Team />} />
                     <Route path="new" element={<NewTeamForm />} />
                     <Route index element={<LeagueStandings />} /> */}
-                {/* </Route> */}
-              </Routes>
-              <Footer />
-              <Overlay />
-            </>
-          </ModalContextProvider>
+              {/* </Route> */}
+            </Routes>
+            <Footer />
+            <Overlay />
+          </>
         </Provider>
       </ChakraProvider>
     </BrowserRouter>
