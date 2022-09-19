@@ -24,17 +24,11 @@ const Hero = (): JSX.Element => {
         _after={{
           content: "''",
           position: 'absolute',
-          background:
-            "url('/assets/images/home/mobile/image-hero.jpeg') center/contain no-repeat",
           width: '100%',
           height: '80%',
           top: '-6rem',
           left: 0,
           zIndex: '-1',
-          '@media screen and (min-width: 30em)': {
-            background:
-              "url('/assets/images/home/tablet/image-hero.jpeg') center/contain no-repeat",
-          },
           '@media screen and (min-width: 62em)': {
             width: '150%',
             height: '220%',

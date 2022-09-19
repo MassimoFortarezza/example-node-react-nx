@@ -48,10 +48,10 @@ const Footer = (): JSX.Element => {
           mt="3rem"
         >
           <Text variant="darkBackground" gridArea={{ sm: 'a' }}>
-            BuildConnect is an all in one stop to fulfill your audio needs.
-            We&apos;re a small team of music lovers and sound specialists who
-            are devoted to helping you get the most out of personal audio. Come
-            and visit our demo facility - we’re open 7 days a week.
+            It was popularised in the 1960s with the release of Letraset sheets
+            containing Lorem Ipsum passages, and more recently with desktop
+            publishing software like Aldus PageMaker including versions of Lorem
+            Ipsum.
           </Text>
           <Text variant="darkBackground" gridArea={{ sm: 'b' }}>
             Copyright 2021. All Rights Reserved
